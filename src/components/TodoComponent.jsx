@@ -38,8 +38,8 @@ export default function TodoComponent() {
         })
         itemResult.push(_n)
       })
-      setItems([...itemResult.slice(1)])
-      setFilteredItems([...itemResult.slice(1)])
+      setItems([...itemResult.slice(2)])
+      setFilteredItems([...itemResult.slice(2)])
     } else {
       setHeaders([])
     }
@@ -50,7 +50,6 @@ export default function TodoComponent() {
       const f = filterDate.split('-')
       const fR = parseInt(f[1], 10)+'/'+parseInt(f[2],10)+'/'+f[0]
       const filterResult = items.filter((item) => {
-        console.log(item['Tanggal Inspeksi'],fR)
         return item['Tanggal Inspeksi'] == fR
       })
       setFilteredItems([...filterResult])
