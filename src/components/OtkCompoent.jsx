@@ -33,10 +33,10 @@ export default function OtkCompoent() {
         })
         itemResult.push(_n)
       })
-      const filtered = itemResult.slice(1).filter((item) => {
-        return item[0] === _user.email
-      })
-      setItems([...filtered])
+      // const filtered = itemResult.slice(1).filter((item) => {
+      //   return item[0] === _user.email
+      // })
+      setItems([...itemResult.slice(1)])
     } else {
       setHeaders([])
     }
