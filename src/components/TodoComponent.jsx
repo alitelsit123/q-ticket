@@ -20,7 +20,18 @@ export default function TodoComponent() {
   const _handleFilterDate = (args) => {
     setFilterDate(args)
   }
-
+  const updates = () => {
+    if(filterDate) {
+      const f = filterDate.split('-')
+      const fR = parseInt(f[1], 10)+'/'+parseInt(f[2],10)+'/'+f[0]
+      const filterResult = items.filter((item) => {
+        return item['Tanggal Inspeksi'] == fR
+      })
+      setFilteredItems([...filterResult])
+    } else {
+      setFilteredItems([...items])
+    }
+  }
   useEffect(() => {
     if(inspectNetwork && inspectNetwork[0] && inspectNetwork[0][0]) {
       const keys = Object.values(inspectNetwork[0][0])
@@ -46,16 +57,15 @@ export default function TodoComponent() {
 
   useEffect(() => {
     if(filterDate) {
-      const f = filterDate.split('-')
-      const fR = parseInt(f[1], 10)+'/'+parseInt(f[2],10)+'/'+f[0]
-      const filterResult = items.filter((item) => {
-        return item['Tanggal Inspeksi'] == fR
-      })
-      setFilteredItems([...filterResult])
+      updates()
     } else {
       setFilteredItems([...items])
     }
   }, [filterDate])
+
+  useEffect(() => {
+    updates()
+  }, [items])
 
   return (
     <div className='w-full'>
@@ -115,8 +125,8 @@ export default function TodoComponent() {
                     <div>
                       <div className='flex justify-between'><span>Download</span><span>{item['Download']} Mbps</span></div>
                       <div className='flex justify-between'><span>Upload</span><span>{item['Upload']} Mbps</span></div>
-                      <div className='flex justify-between'><span>Ping</span><span>{item['Ping']} Mbps</span></div>
-                      <div className='flex justify-between'><span>Packet Loss</span><span>{item['Packet Loss']} Mbps</span></div>
+                      <div className='flex justify-between'><span>Ping</span><span>{item['Ping']} Ms</span></div>
+                      <div className='flex justify-between'><span>Packet Loss</span><span>{item['Packet Loss']} %</span></div>
                     </div>
                   </TableCell>
                   <TableCell component="th" scope="row">
