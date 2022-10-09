@@ -39,7 +39,6 @@ export default function TodoComponent() {
         itemResult.push(_n)
       })
       setItems([...itemResult.slice(2)])
-      setFilteredItems([...itemResult.slice(2)])
     } else {
       setHeaders([])
     }
