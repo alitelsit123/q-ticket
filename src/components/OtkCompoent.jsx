@@ -50,7 +50,12 @@ export default function OtkCompoent() {
             <TableRow>
               {
                 headers.map((item) => (
-                  <TableCell key={item} sx={{fontWeight:'700'}}>{item}</TableCell>
+                  <>
+                    {
+                      item != 'Email Address' &&
+                      <TableCell key={item} sx={{fontWeight:'700'}}>{item}</TableCell>
+                    }
+                  </>
                 ))
               }
             </TableRow>
@@ -77,7 +82,12 @@ export default function OtkCompoent() {
                       )
                     }
                     return (
-                      <TableCell key={i} component="th" scope="row">{row}</TableCell>
+                      <>
+                        {
+                          i > 0 &&
+                          <TableCell key={i} component="th" scope="row">{row}</TableCell>
+                        }
+                      </>
                     )
                   })
                 }
