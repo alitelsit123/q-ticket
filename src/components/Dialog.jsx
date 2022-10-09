@@ -23,7 +23,7 @@ export default function Dialogs(props) {
 
     <Dialog fullScreen open={dialogg.open} 
     TransitionComponent={Transition}>
-      <div className={'px-16 w-full h-screen bg-white z-10 py-8 shadow-lg border border-gray-300 rounded-tl-3xl rounded-tr-3xl'}>
+      <div className={'px-16 w-full bg-white z-10 py-8 shadow-lg border border-gray-300 rounded-tl-3xl rounded-tr-3xl'}>
         <div className="flex items-center justify-between border-b pb-4 mb-4">
           <div className="font-black text-lg">{dialogg.title}</div>
           <button type="button" onClick={_handleClose} className="flex items-center justify-center bg-gray-300 rounded-full p-2">
