@@ -112,7 +112,7 @@ export default function TodoComponent() {
                   <TableCell component="th" scope="row">{item['Waktu Inspeksi']}</TableCell>
                   <TableCell component="th" scope="row">{item['LOKASI']}</TableCell>
                   <TableCell component="th" scope="row"></TableCell>
-                  <TableCell component="th" scope="row"></TableCell>
+                  <TableCell component="th" scope="row">{item['Wireless']}</TableCell>
                   <TableCell component="th" scope="row" sx={{width:'200px'}}>
                     <div>
                       <div className='flex justify-between'><span>Download</span><span>{item['Download']} Mbps</span></div>
