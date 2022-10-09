@@ -66,6 +66,7 @@ export default function TodoComponent() {
               <TableCell sx={{fontWeight:'700'}}>Nama</TableCell>
               <TableCell sx={{fontWeight:'700'}}></TableCell>
               <TableCell sx={{fontWeight:'700'}}></TableCell>
+              <TableCell sx={{fontWeight:'700'}}></TableCell>
             </TableRow>
           </TableBody>
           <TableBody>
@@ -95,6 +96,7 @@ export default function TodoComponent() {
                       <div className='flex justify-between'><span>PIC 4</span><span>{item['PIC 4']}</span></div>
                     </div>
                   </TableCell>
+                  <TableCell component="th" scope="row"></TableCell>
                   <TableCell component="th" scope="row"></TableCell>
                   <TableCell component="th" scope="row">{item['Catatan kendala jaringan bila ada']}</TableCell>
                   <TableCell component="th" scope="row">
