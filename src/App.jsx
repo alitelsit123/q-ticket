@@ -45,8 +45,8 @@ function App() {
     <div className="App w-full h-screen bg-blue-700 flex items-center justify-center relative">
       <img src={background_img} alt="" className={'absolute top-0 left-0 max-w-screen max-h-screen h-screen w-screen'} />
       <div className='w-full h-[100vh] bg-transparent relative'>
-        <div className='flex justify-between items-center w-3/4 mx-auto'>
-          <div className='font-black p-4 text-white'>Inspeksi & Otk</div>
+        <div className='flex justify-between items-center w-3/4 mx-auto translate-y-4'>
+          <div className='font-black p-4 text-white text-2xl'>LOGBOOK</div>
           <div className='flex items-center justify-between bg-transparent'>
             <button type='button' className='bg-white p-2 px-4 rounded-full flex items-center'>
               {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
