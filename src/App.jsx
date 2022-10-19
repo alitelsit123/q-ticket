@@ -34,6 +34,7 @@ function App() {
     axios.get('https://docs.google.com/spreadsheets/d/e/2PACX-1vTjRTtfcIPWITcYk5deZjMosWLkXsmFMzPnh3SmdRHsjoKVWCeCB7axame6fPUCfuTFukH0Hbi6ZQwZ/pubhtml').then((_r) => {
       setInspectNetwork(h.parse(_r.data).results)
     })
+    document.title = "Logbook"
   }, [])
 
   if(!user) {
