@@ -23,13 +23,15 @@ export default function Home(props) {
 
         <Box
         onClick={() => setBaseDialog({open: true,type: 'todo',title:'LOGBOOK INSPEKSI JARINGAN'})}
-        className={`relative bg-white bg-center cursor-pointer h-[150px] w-[150px] border border-gray-300 rounded-full font-black flex items-center justify-center`} target={'_blank'}>
-          <img src={todo_img} alt="" width={'80%'} height={'80%'} className={'z-10 absolute top-1/2 left-1/2'} style={{transform: 'translate(-50%,-50%)'}} />
+        className={`relative bg-white bg-center cursor-pointer h-[350px] w-[300px] p-4 border border-gray-300 rounded-lg font-black flex items-end justify-center`} target={'_blank'}>
+          <img src={todo_img} alt="" width={'80%'} height={'80%'} className={'z-10 absolute top-0 left-1/2'} style={{transform: 'translateX(-50%)'}} />
+          <div className='text-center'>LOG INSPEKSI JARINGAN</div>
         </Box>
         <Box
         onClick={() => setBaseDialog({open: true,type: 'otk',title:'LOGBOOK PEMELIHARAAN & PERAWAATAN JARINGAN'})}
-        className='relative cursor-pointer h-[150px] w-[150px] border bg-white border-gray-300 rounded-full font-black flex items-center justify-center' target={'_blank'}>
-          <img src={logbook_img} alt="" width={'80%'} height={'80%'} className={'z-10 absolute top-1/2 left-1/2'} style={{transform: 'translate(-50%,-50%)'}} />
+        className='relative cursor-pointer h-[350px] w-[300px] p-4 border bg-white border-gray-300 rounded-lg font-black flex items-end justify-center' target={'_blank'}>
+          <img src={logbook_img} alt="" width={'80%'} height={'80%'} className={'z-10 absolute top-0 left-1/2'} style={{transform: 'translateX(-50%)'}} />
+          <div className='text-center capitalize'>LOG PEMELIHARAAN DAN PERAWATAN JARINGAN</div>
         </Box>
 
       </div>
