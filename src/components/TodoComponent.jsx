@@ -79,34 +79,25 @@ export default function TodoComponent() {
           <button type='button' onClick={() => setFilterDate('')} className='bg-red-500 text-white px-3 py-1'>Reset</button>  
         </div>  
       </div>  
-      <TableContainer component={Paper} className={'h-screen'}>
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <TableContainer component={Paper} className={'h-screen mt-4'}>
+        <Table sx={{ 
+          minWidth: 650,
+          borderTop: '1px solid rgba(224, 224, 224, 1)',
+          "& .MuiTableCell-root": {
+            borderLeft: "1px solid rgba(224, 224, 224, 1)"
+          } 
+        }} aria-label="simple table">
           <TableBody>
             <TableRow>
               {/* <TableCell sx={{fontWeight:'900'}}>Pelaksana Tugas</TableCell> */}
-              <TableCell rowSpan={2} sx={{fontWeight:'900'}}>Tanggal</TableCell>
-              <TableCell rowSpan={2} sx={{fontWeight:'900'}}>Waktu</TableCell>
-              <TableCell rowSpan={2} sx={{fontWeight:'900'}}>Lokasi</TableCell>
-              <TableCell colSpan={3} sx={{fontWeight:'900',minWidth:'600px'}}>Kondisi Jaringan</TableCell>
-              <TableCell colSpan={2} sx={{fontWeight:'900',minWidth: '300px'}}>PIC</TableCell>
+              <TableCell sx={{fontWeight:'900'}}>Tanggal</TableCell>
+              <TableCell sx={{fontWeight:'900'}}>Waktu</TableCell>
+              <TableCell sx={{fontWeight:'900'}}>Lokasi</TableCell>
+              <TableCell sx={{fontWeight:'900'}}>SSID Wifi</TableCell>
+              <TableCell sx={{fontWeight:'900'}}>Test Internet</TableCell>
+              <TableCell sx={{fontWeight:'900'}}>PIC</TableCell>
               <TableCell sx={{fontWeight:'900'}}>Catatan Kendala</TableCell>
               <TableCell sx={{fontWeight:'900'}}>Dokument Kegiatan</TableCell>
-            </TableRow>
-          </TableBody>
-          <TableBody sx={{borderBottom:'1px solid '+grey[300]}}>
-            <TableRow
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
-              {/* <TableCell sx={{fontWeight:'700'}}>Nama</TableCell> */}
-              <TableCell sx={{fontWeight:'700'}}></TableCell>
-              <TableCell sx={{fontWeight:'700'}}></TableCell>
-              <TableCell sx={{fontWeight:'700'}}></TableCell>
-              <TableCell sx={{fontWeight:'700'}}>LAN</TableCell>
-              <TableCell sx={{fontWeight:'700'}}>Wireless</TableCell>
-              <TableCell sx={{fontWeight:'700'}}>Test Internet</TableCell>
-              <TableCell sx={{fontWeight:'700'}}>Nama</TableCell>
-              <TableCell sx={{fontWeight:'700'}}></TableCell>
-              <TableCell sx={{fontWeight:'700'}}></TableCell>
             </TableRow>
           </TableBody>
           <TableBody>
@@ -118,8 +109,7 @@ export default function TodoComponent() {
                 >
                   <TableCell component="th" scope="row">{item['Tanggal Inspeksi']}</TableCell>
                   <TableCell component="th" scope="row">{item['Waktu Inspeksi']}</TableCell>
-                  <TableCell component="th" scope="row">{item['LOKASI']}</TableCell>
-                  <TableCell component="th" scope="row"></TableCell>
+                  <TableCell component="th" scope="row">{item['Lokasi']}</TableCell>
                   <TableCell component="th" scope="row">{item['Wireless']}</TableCell>
                   <TableCell component="th" scope="row" sx={{width:'200px'}}>
                     <div>
@@ -132,7 +122,6 @@ export default function TodoComponent() {
                   <TableCell component="th" scope="row">
                     {item['PIC']}
                   </TableCell>
-                  <TableCell component="th" scope="row"></TableCell>
                   <TableCell component="th" scope="row">{item['Catatan kendala jaringan bila ada']}</TableCell>
                   <TableCell component="th" scope="row">
                     <ul>

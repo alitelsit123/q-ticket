@@ -45,7 +45,13 @@ export default function OtkCompoent() {
   return (
     <div className='w-full'>
        <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <Table sx={{ 
+          minWidth: 650,
+          borderTop: '1px solid rgba(224, 224, 224, 1)',
+          "& .MuiTableCell-root": {
+            borderLeft: "1px solid rgba(224, 224, 224, 1)"
+          }  
+        }} aria-label="simple table">
           <TableHead>
             <TableRow>
               {

@@ -9,3 +9,8 @@ export const dialog = atom({
   type: null,
   data: []
 })
+export const baseDialog = atom({
+  open: false,
+  type: null,
+  title: ''
+})
