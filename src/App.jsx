@@ -78,7 +78,7 @@ function App() {
               <>
                 <Button style={{flexGrow:1,marginBottom:8}} color={'primary'} variant={'contained'} onClick={() => {}}>
                   <a style={{width:'100%',height:'100%'}} href="https://docs.google.com/forms/d/e/1FAIpQLSdN0VlLoLFxpDiSCQhu5k1f0kyFxQKC87TDZAR3VhHyQTLWMg/viewform?usp=sharing" target="_blank" rel="noopener noreferrer">
-                    Form
+                    ISI LOG
                   </a>
                 </Button>
                 <Button onClick={() => {
@@ -89,7 +89,7 @@ function App() {
                     title: 'LOGBOOK INSPEKSI JARINGAN',
                     data: inspectNetwork
                   })
-                }} color={'primary'} variant={'contained'}>Log</Button>
+                }} color={'primary'} variant={'contained'}>TAMPILKAN LOG</Button>
               </>
             }
             {
@@ -97,7 +97,7 @@ function App() {
               <>
                 <Button style={{flexGrow:1,marginBottom:8}} onClick={() => {}} color={'primary'} variant={'contained'}>
                   <a style={{width:'100%',height:'100%'}} href="https://docs.google.com/forms/d/e/1FAIpQLSc29ltbo24_-YmSF8ZoA7Au2U75rJceEq9D9Dc9OTp-t1AWWQ/viewform?usp=sharing" target="_blank" rel="noopener noreferrer">
-                    Form
+                    ISI LOG
                   </a>
                 </Button>
                 <Button onClick={() => {
@@ -108,7 +108,7 @@ function App() {
                     title: 'LOGBOOK PEMELIHARAAN & PERAWAATAN JARINGAN',
                     data: otk
                   })
-                }} color={'primary'} variant={'contained'}>Log</Button>
+                }} color={'primary'} variant={'contained'}>TAMPILKAN LOG</Button>
               </>
             }
           </>
