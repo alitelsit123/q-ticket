@@ -20,7 +20,7 @@ export default function TodoContent() {
           <div className="flex">
             <div className="w-[5%]">3.</div>
             <div className="w-[25%]">Deskripsi</div>
-            <div className="break-words w-[70%]">: Memberikan layanan kepada pegawai internal mengenai pencatatan secara digital dan melihat data lama mengenai kegiatan operasional harian inspeksi jaringan oleh pegawai sub bidang Operasional Teknologi Komunikasi</div>
+            <div className="break-words w-[70%] flex"><span className="mr-1">:</span> <span>Memberikan layanan kepada pegawai internal mengenai pencatatan secara digital dan melihat data lama mengenai kegiatan operasional harian inspeksi jaringan oleh pegawai sub bidang Operasional Teknologi Komunikasi</span></div>
           </div>
 
         </div>
