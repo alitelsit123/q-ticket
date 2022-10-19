@@ -1,6 +1,7 @@
 import { useState } from "react"
 import {useAtom} from 'jotai'
 import { user } from "../stores/app"
+import background_img from '../assets/login_background.jpg'
 
 export default function Login(props) {
   const [,setUser] = useAtom(user)
@@ -22,8 +23,9 @@ export default function Login(props) {
   }
 
   return (
-    <div className="w-screen h-screen flex justify-center items-center bg-blue-700 shadow rounded">
-      <div className="w-[300px] bg-white px-4 py-2 pb-7 flex flex-col">
+    <div className="relative w-screen h-screen flex justify-center items-center bg-blue-700 shadow rounded">
+      <img src={background_img} alt="" className={'absolute top-0 left-0 max-w-screen max-h-screen h-screen w-screen'} />
+      <div className="w-[300px] bg-white px-4 py-2 pb-7 flex flex-col z-10">
         <div className="text-blue-700 text-2xl font-black mx-auto py-4">Login Form</div>
         <div className="flex-grow mb-7">
           <input type="text" onChange={(e) => setEmail(e.target.value)} className="border border-gray-300 px-3 py-1 w-full mb-4 focus:ring-none focus:outline-none" placeholder="Email" />
