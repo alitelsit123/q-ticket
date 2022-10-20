@@ -85,7 +85,10 @@ export default function TodoComponent() {
           borderTop: '1px solid rgba(224, 224, 224, 1)',
           "& .MuiTableCell-root": {
             borderLeft: "1px solid rgba(224, 224, 224, 1)"
-          } 
+          },
+          "& .MuiTableRow-root:last-child th": {
+            border: "1px solid rgba(224, 224, 224, 1)"
+          },
         }} aria-label="simple table">
           <TableBody>
             <TableRow>

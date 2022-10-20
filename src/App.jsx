@@ -44,21 +44,23 @@ function App() {
   return (
     <div className="App w-full h-screen bg-blue-700 flex items-center justify-center relative">
       <img src={background_img} alt="" className={'absolute top-0 left-0 max-w-screen max-h-screen h-screen w-screen'} />
-      <div className='w-full h-[100vh] bg-transparent relative'>
-        <div className='flex justify-between items-center w-3/4 mx-auto translate-y-4'>
-          <div className='font-black p-4 text-white text-2xl'>LOGBOOK</div>
-          <div className='flex items-center justify-between bg-transparent'>
-            <button type='button' className='bg-white p-2 px-4 rounded-full flex items-center'>
-              {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-              </svg> */}
-              <div className='ml-1 '>{user.email}</div>
-            </button>
-            <button type='button' className='p-4 text-white' onClick={() => {setUser(null)}}>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
-              </svg>
-            </button>
+      <div className='w-full h-[100vh] bg-transparent relative '>
+        <div className={'border-b border-blue-200 bg-blue-800 shadow-xl'}>
+          <div className='flex justify-between items-center w-3/4 mx-auto '>
+            <div className='font-black p-4 text-white text-2xl'>Logbook Operasional Jaringan</div>
+            <div className='flex items-center justify-between bg-transparent'>
+              <button type='button' className='p-2 px-4 rounded-full flex items-center'>
+                {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                </svg> */}
+                <div className='ml-1 font-black text-white'>{user.email}</div>
+              </button>
+              <button type='button' className='p-2 text-white bg-blue-700 rounded-full' onClick={() => {setUser(null)}}>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
         <Dialogs>

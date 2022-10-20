@@ -50,7 +50,10 @@ export default function OtkCompoent() {
           borderTop: '1px solid rgba(224, 224, 224, 1)',
           "& .MuiTableCell-root": {
             borderLeft: "1px solid rgba(224, 224, 224, 1)"
-          }  
+          },
+          "& .MuiTableRow-root:last-child th": {
+            border: "1px solid rgba(224, 224, 224, 1)"
+          },
         }} aria-label="simple table">
           <TableHead>
             <TableRow>
@@ -76,15 +79,17 @@ export default function OtkCompoent() {
                   Object.values(item).map((row,i) => {
                     if(i === 12) {
                       return (
-                        <ul>
-                        {
-                          row.split(', ').map((e,_i) => (
-                            <li key={_i}>
-                              <a target={'_blank'} style={{color:blue[600]}} href={e}>{e}</a>
-                            </li>
-                          ))
-                        }
-                      </ul>
+                        <TableCell>
+                          <ul>
+                            {
+                              row.split(', ').map((e,_i) => (
+                                <li key={_i}>
+                                  <a target={'_blank'} style={{color:blue[600]}} href={e}>{e}</a>
+                                </li>
+                              ))
+                            }
+                          </ul>
+                        </TableCell>
                       )
                     }
                     return (
