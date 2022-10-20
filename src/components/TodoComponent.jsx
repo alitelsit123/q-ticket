@@ -118,7 +118,7 @@ export default function TodoComponent() {
                     <div>
                       <div className='flex justify-between'><span>Download</span><span>{item['Download']} Mbps</span></div>
                       <div className='flex justify-between'><span>Upload</span><span>{item['Upload']} Mbps</span></div>
-                      <div className='flex justify-between'><span>Ping</span><span>{item['Ping']} Ms</span></div>
+                      <div className='flex justify-between'><span>Ping</span><span>{item['Ping']} ms</span></div>
                       <div className='flex justify-between'><span>Packet Loss</span><span>{item['Packet Loss']} %</span></div>
                     </div>
                   </TableCell>
